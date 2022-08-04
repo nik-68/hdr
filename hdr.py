@@ -474,15 +474,13 @@ time.sleep(3.5)
 os.system("clear")
 print(Fore.BLUE+"\n --Attacks Ddos--\n"+Style.RESE)
 
-        choice1 = input("\nOne target [0] or more[1] ==> ")
+        choice1 = input("\nDo one target [0] or more[1] ==> ")
 
 	if choice1 == "1":
 		ip_file = input("Insert txt file of ips > ")
 		ips = open(ip_file).readlines()
 
-
-
-	else:
+           else:
 		url = input("\nInsert URL/IP ===> ").strip()
 
 		if url == "":
