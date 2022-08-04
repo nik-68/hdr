@@ -472,7 +472,7 @@ os.system("clear")
 print(Fore.GREEN+"З А Г Р У З К А....")
 time.sleep(3.5)
 os.system("clear")
-print(Fore.BLUE+"\n --Attacks Ddos--\n"+Style.RESE
+print(Fore.BLUE+"\n --Attacks Ddos--\n"+Style.RESE")
 
         choice1 = input("\nOne target [0] or more[1] ==> ")
 
