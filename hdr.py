@@ -474,14 +474,13 @@ time.sleep(3.5)
 os.system("clear")
 print(Fore.BLUE+"\n --Attacks Ddos--\n"+Style.RESE)
 
-        choice1 = input("\nDo one target [0] or more[1] ==> ")
-
-	if choice1 == "1":
-		ip_file = input("Insert txt file of ips > ")
+         choice1 = input("\nDo  one target [0] or more[1] ==> ")
+                if choice1 == "1":
+		ip_file = input("Insert txt file of ips ==> ")
 		ips = open(ip_file).readlines()
 
-           else:
-		url = input("\nInsert URL/IP ===> ").strip()
+         .else:
+		url = input("\nСсылка URL/IP ==> ").strip()
 
 		if url == "":
 			print ("Please enter the url.")
@@ -582,7 +581,7 @@ def proxylist():
 def numthreads():
 	global threads
 	try:
-		threads = int(input("Insert number of threads (800): "))
+		threads = int(input("Потоки (~800 лучше) ==> "))
 	except ValueError:
 		threads = 800
 		print ("800 threads selected.\n")
