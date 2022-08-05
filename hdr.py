@@ -465,7 +465,7 @@ os.system("clear")
 print(Fore.GREEN+"З А Г Р У З К А....")
 time.sleep(3.5)
 os.system("clear")
-print(Fore.BLUE+"\n --Attacks Ddos--\n"+Style.RESE)
+print(Fore.BLUE+"\n --Attacks Ddos--\n")
 
 
 def starturl(): # in questa funzione setto l'url per renderlo usabile per il futuro settaggio delle richieste HTTP.
@@ -475,16 +475,16 @@ def starturl(): # in questa funzione setto l'url per renderlo usabile per il fut
 	global choice1
 	global ips
 
-	choice1 = input("\nDo you want one target [0] or more[1] > ")
+	choice1 = input("\nOne target [0] or more[1] => ")
 
 	if choice1 == "1":
-		ip_file = input("Insert txt file of ips > ")
+		ip_file = input("Insert txt file of ips => ")
 		ips = open(ip_file).readlines()
 
 
 
 	else:
-		url = input("\nInsert URL/IP: ").strip()
+		url = input("\nInsert URL/IP => ").strip()
 
 		if url == "":
 			print ("Please enter the url.")
