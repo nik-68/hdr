@@ -477,7 +477,8 @@ def starturl(): # in questa funzione setto l'url per renderlo usabile per il fut
 	global ips
 
         choice1 = input("\nOne target [0] or more[1] ==>")
-                if choice1 == "1":
+
+        if choice1 == "1":
 		ip_file = input("Insert txt file of ips ==> ")
 		ips = open(ip_file).readlines()
 
