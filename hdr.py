@@ -484,7 +484,7 @@ def starturl(): # in questa funzione setto l'url per renderlo usabile per il fut
 
 
 	else:
-		url = input("\nInsert URL/IP => ").strip()
+		url = input("\nСсылка URL/IP => ").strip()
 
 		if url == "":
 			print ("Please enter the url.")
@@ -516,7 +516,7 @@ def starturl(): # in questa funzione setto l'url per renderlo usabile per il fut
 
 def proxymode():
 	global choice2
-	choice2 = input("Do you want proxy/socks mode? Answer 'y' to enable it: ")
+	choice2 = input("Proxy/socks mode? Answer 'y' to enable it: ")
 	if choice2 == "y":
 		choiceproxysocks()
 	else:
@@ -542,7 +542,7 @@ def choicedownproxy():
 		proxylist()
 
 def choicedownsocks():
-	choice4 = input("Do you want to download a new list of socks? Answer 'y' to do it: ")
+	choice4 = input("Download a new list of socks? Answer 'y' to do it: ")
 	if choice4 == "y":
 		urlproxy = "https://www.socks-proxy.net/"
 		proxyget(urlproxy)
@@ -585,7 +585,7 @@ def proxylist():
 def numthreads():
 	global threads
 	try:
-		threads = int(input("Insert number of threads (800): "))
+		threads = int(input("Потоки (~800 лучше) ══> "))
 	except ValueError:
 		threads = 800
 		print ("800 threads selected.\n")
