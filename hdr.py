@@ -476,14 +476,14 @@ def starturl(): # in questa funzione setto l'url per renderlo usabile per il fut
 	global choice1
 	global ips
 
-        choice1 = input("\nOne target [0] or more[1] ==>")
+        choice1 = input("\nOne target [0] or more[1] ==> ")
 
         if choice1 == "1":
 		ip_file = input("Insert txt file of ips ==> ")
 		ips = open(ip_file).readlines()
 
          else:
-		url = input("\nСсылка URL/IP ==>").strip()
+		url = input("\nСсылка URL/IP ==> ").strip()
 
 		if url == "":
 			print ("Please enter the url.")
