@@ -475,7 +475,7 @@ def starturl(): # in questa funzione setto l'url per renderlo usabile per il fut
 	global choice1
 	global ips
 
-	choice1 = input("\nOne target [0] or more[1] => ")
+	choice1 = input("\n Target [0] or more[1] => ")
 
 	if choice1 == "1":
 		ip_file = input("Insert txt file of ips => ")
@@ -484,7 +484,7 @@ def starturl(): # in questa funzione setto l'url per renderlo usabile per il fut
 
 
 	else:
-		url = input("\nСсылка URL/IP => ").strip()
+		url = input("\n Ссылка URL/IP => ").strip()
 
 		if url == "":
 			print ("Please enter the url.")
@@ -509,14 +509,14 @@ def starturl(): # in questa funzione setto l'url per renderlo usabile per il fut
 		try:
 			urlport = url.replace("http://", "").replace("https://", "").split("/")[0].split(":")[1]
 		except:
-			urlport = "80"
+			urlport = "80","443"
 
 	proxymode()
 
 
 def proxymode():
 	global choice2
-	choice2 = input("Proxy/socks mode? Answer 'y' to enable it: ")
+	choice2 = input("Proxy/socks mode?'y' [Enter]: ")
 	if choice2 == "y":
 		choiceproxysocks()
 	else:
@@ -524,7 +524,7 @@ def proxymode():
 
 def choiceproxysocks():
 	global choice3
-	choice3 = input("Type '0' to enable proxymode or type '1' to enable socksmode: ")
+	choice3 = input("Proxymode [0] socksmode[1]: ")
 	if choice3 == "0":
 		choicedownproxy()
 	elif choice3 == "1":
@@ -534,7 +534,7 @@ def choiceproxysocks():
 		choiceproxysocks()
 
 def choicedownproxy():
-	choice4 = input("Do you want to download a new list of proxy? Answer 'y' to do it: ")
+	choice4 = input("Download a new list of Proxy? 'y' [Enter]: ")
 	if choice4 == "y":
 		urlproxy = "http://free-proxy-list.net/"
 		proxyget(urlproxy)
@@ -542,7 +542,7 @@ def choicedownproxy():
 		proxylist()
 
 def choicedownsocks():
-	choice4 = input("Download a new list of socks? Answer 'y' to do it: ")
+	choice4 = input("Download a new list of Socks? 'y' [Enter]: ")
 	if choice4 == "y":
 		urlproxy = "https://www.socks-proxy.net/"
 		proxyget(urlproxy)
@@ -576,7 +576,7 @@ def proxyget(urlproxy): # lo dice il nome, questa funzione scarica i proxies
 
 def proxylist():
 	global proxies
-	out_file = str(input("Enter the proxylist filename/path (proxy.txt): "))
+	out_file = str(input("Enter Proxylist filename/path (proxy.txt): "))
 	if out_file == "":
 		out_file = "proxy.txt"
 	proxies = open(out_file).readlines()
@@ -585,7 +585,7 @@ def proxylist():
 def numthreads():
 	global threads
 	try:
-		threads = int(input("Потоки (~800 лучше) ══> "))
+		threads = int(input(" Потоки (~800 лучше) ══> "))
 	except ValueError:
 		threads = 800
 		print ("800 threads selected.\n")
@@ -594,14 +594,14 @@ def numthreads():
 def multiplication():
 	global multiple
 	try:
-		multiple = int(input("Insert a number of multiplication for the attack [(1-5=normal)(50=powerful)(100 or more=bomb)]: "))
+		multiple = int(input("Multiplication attack bomb [(1-5=normal)(50=powerful)(100 or more=bomb)]: "))
 	except ValueError:
 		print("You mistyped, try again.\n")
 		multiplication()
 	begin()
 
 def begin():
-	choice6 = input("Press 'Enter' to start attack: ")
+	choice6 = input("Press 'Enter' start attack: ")
 	if choice6 == "":
 		loop()
 	elif choice6 == "Enter": #lool
